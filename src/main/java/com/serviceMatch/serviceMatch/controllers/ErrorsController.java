@@ -19,23 +19,23 @@ public class ErrorsController implements ErrorController {
         int httpErrorCode = getErrorCode(httpRequest);
 
         switch (httpErrorCode) {
-            case 400: {
+            case 400 -> {
                 errorMsg = "El recurso solicitado no existe.";
                 break;
             }
-            case 403: {
+            case 403 -> {
                 errorMsg = "No tiene permisos para acceder al recurso.";
                 break;
             }
-            case 401: {
+            case 401 -> {
                 errorMsg = "No se encuentra autorizado.";
                 break;
             }
-            case 404: {
+            case 404 -> {
                 errorMsg = "El recurso solicitado no fue encontrado.";
                 break;
             }
-            case 500: {
+            case 500 -> {
                 errorMsg = "Ocurrió un error interno.";
                 break;
             }
